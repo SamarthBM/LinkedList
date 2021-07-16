@@ -44,6 +44,19 @@ public class LinkedListOperation {
 		}
 		return head;
 	}
+	/*
+	 * Method to insert a element in-between two element.
+	 * 
+	 * @param myNode: element after which the another element should be added..
+	 * 
+	 * @param newNode: element to be added.
+	 */
+
+	public void insertInMiddle(MyNode myNode, MyNode newNode) {
+		INode tempNode = myNode.getNext();
+		myNode.setNext(newNode);
+		newNode.setNext(tempNode);
+	}
 
 	/* Method to display Linked List */
 	public void displayNode() {
