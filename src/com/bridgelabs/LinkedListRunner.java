@@ -1,6 +1,6 @@
 /****************************************************************
- * Purpose :To insert another element 40 after 30.
- * Final sequence:56->30->40->70
+ * Purpose :To delete 40 from the list.
+ * Final sequence:56->30->70
  * @author Samarth BM
 
 ***************************************************************/
@@ -21,6 +21,9 @@ public class LinkedListRunner {
 		linked_list.appendNode(myThirdNode);
 		// Inserting 40 after 30.
 		linked_list.insertAtPosition(40, 2);
+		linked_list.displayNode();
+		// Deleting 40.
+		linked_list.deleteAtPosition(2);
 		linked_list.displayNode();
 	}
 

@@ -110,7 +110,21 @@ public class LinkedListOperation<K> {
 		}
 		newNode.next = nodeAtPreviousIndex.next;
 		nodeAtPreviousIndex.next = newNode;
+	}
 
+	/*
+	 * Method to delete a element at particular position.
+	 * 
+	 * @param position: position of element to be deleted.
+	 */
+	public void deleteAtPosition(int position) {
+		MyNode previousNode = (MyNode) head;
+		MyNode currentNode = (MyNode) head;
+		for (int i = 0; i < position; i++) {
+			previousNode = currentNode;
+			currentNode = (MyNode) currentNode.next;
+		}
+		previousNode.next = currentNode.next;
 	}
 
 	/* Method to display Linked List */
