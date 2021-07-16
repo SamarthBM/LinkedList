@@ -8,8 +8,8 @@ package com.bridgelabs;
 
 public class LinkedListOperation {
 
-	 INode head = null;
-	 INode tail = null;
+	INode head = null;
+	INode tail = null;
 
 	/*
 	 * Method to add a element.
@@ -26,7 +26,7 @@ public class LinkedListOperation {
 			head = newNode;
 			head.setNext(temp);
 		}
-		
+
 	}
 
 	/*
@@ -34,17 +34,18 @@ public class LinkedListOperation {
 	 * 
 	 * @param newNode: element to be added.
 	 */
-	public void appendNode(MyNode newNode) {
-		if (head == null) {
-			head = newNode;
+	public INode appendNode(MyNode newNode) {
+		if (tail == null)
 			tail = newNode;
-		} else {
-			INode temp = head;
-            head = newNode;
-            head.setNext(temp);
+		if (head == null)
+			head = newNode;
+		else {
+			this.tail.setNext(newNode);
+			this.tail = newNode;
 		}
-		
+		return head;
 	}
+
 	/*
 	 * Method to insert a element in-between two element.
 	 * 
@@ -58,14 +59,25 @@ public class LinkedListOperation {
 		myNode.setNext(newNode);
 		newNode.setNext(tempNode);
 	}
-	
+
 	/* Method to delete first node in Linked List */
 	public void deleteFirstNode() {
-        if(head == null)
-            System.out.println("Linked List is empty!");
-        else
-            head = head.getNext();
-    }
+		if (head == null)
+			System.out.println("Linked List is empty!");
+		else
+			head = head.getNext();
+	}
+	
+	/* Method to delete last element*/
+	public void deleteLastNode() {
+		INode node = head;
+		while (node.getNext() != tail) {
+			node = node.getNext();
+		}
+		node.setNext(null);
+		tail = node;
+
+	}
 
 	/* Method to display Linked List */
 	public void displayNode() {
