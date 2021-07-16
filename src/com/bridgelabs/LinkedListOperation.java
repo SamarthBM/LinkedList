@@ -6,7 +6,7 @@
 
 package com.bridgelabs;
 
-public class LinkedListOperation {
+public class LinkedListOperation<K> {
 
 	INode head = null;
 	INode tail = null;
@@ -93,6 +93,24 @@ public class LinkedListOperation {
 				tempNode = tempNode.getNext();
 			}
 		}
+	}
+
+	/*
+	 * Method to insert a element at particular position.
+	 * 
+	 * @param key: element to be added.
+	 * 
+	 * @param position: position of element to be placed.
+	 */
+	public void insertAtPosition(int key, int position) {
+		MyNode newNode = new MyNode(key);
+		MyNode nodeAtPreviousIndex = (MyNode) head;
+		for (int i = 0; i < position - 1; i++) {
+			nodeAtPreviousIndex = (MyNode) nodeAtPreviousIndex.next;
+		}
+		newNode.next = nodeAtPreviousIndex.next;
+		nodeAtPreviousIndex.next = newNode;
+
 	}
 
 	/* Method to display Linked List */

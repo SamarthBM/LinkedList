@@ -1,6 +1,6 @@
 /****************************************************************
- * Purpose :Ability to search element.
- * Element to search: 30
+ * Purpose :To insert another element 40 after 30.
+ * Final sequence:56->30->40->70
  * @author Samarth BM
 
 ***************************************************************/
@@ -19,11 +19,9 @@ public class LinkedListRunner {
 		linked_list.appendNode(myFirstNode);
 		linked_list.appendNode(mySecondNode);
 		linked_list.appendNode(myThirdNode);
-		// Displaying the nodes.
+		// Inserting 40 after 30.
+		linked_list.insertAtPosition(40, 2);
 		linked_list.displayNode();
-		// Getiing the position of element 30.
-		linked_list.searchElement();
-
 	}
 
 }
