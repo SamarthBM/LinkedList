@@ -8,15 +8,15 @@ package com.bridgelabs;
 
 public class LinkedListOperation {
 
-	public MyNode head = null;
-	public MyNode tail = null;
+	 INode head = null;
+	 INode tail = null;
 
 	/*
 	 * Method to add a element.
 	 * 
 	 * @param newNode: element to be added.
 	 */
-	public MyNode addNode(MyNode newNode) {
+	public void addNode(MyNode newNode) {
 		if (tail == null)
 			tail = newNode;
 		if (head == null)
@@ -26,7 +26,7 @@ public class LinkedListOperation {
 			head = newNode;
 			head.setNext(temp);
 		}
-		return head;
+		
 	}
 
 	/*
@@ -34,15 +34,16 @@ public class LinkedListOperation {
 	 * 
 	 * @param newNode: element to be added.
 	 */
-	public MyNode appendNode(MyNode newNode) {
+	public void appendNode(MyNode newNode) {
 		if (head == null) {
 			head = newNode;
 			tail = newNode;
 		} else {
-			tail.next = newNode;
-			tail = newNode;
+			INode temp = head;
+            head = newNode;
+            head.setNext(temp);
 		}
-		return head;
+		
 	}
 	/*
 	 * Method to insert a element in-between two element.
@@ -57,6 +58,14 @@ public class LinkedListOperation {
 		myNode.setNext(newNode);
 		newNode.setNext(tempNode);
 	}
+	
+	/* Method to delete first node in Linked List */
+	public void deleteFirstNode() {
+        if(head == null)
+            System.out.println("Linked List is empty!");
+        else
+            head = head.getNext();
+    }
 
 	/* Method to display Linked List */
 	public void displayNode() {

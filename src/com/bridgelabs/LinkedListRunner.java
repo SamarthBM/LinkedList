@@ -1,6 +1,6 @@
 /****************************************************************
- * Purpose :Ability to insert 30 between 56 and 70
- * Final Sequence: 56->30->70
+ * Purpose :Ability to delete first element.
+ * Final Sequence: 30->70
  * @author Samarth BM
 
 ***************************************************************/
@@ -20,6 +20,9 @@ public class LinkedListRunner {
 		linked_list.appendNode(myThirdNode);
 		linked_list.insertInMiddle(myFirstNode,mySecondNode);
 		//Displaying the nodes.
+		linked_list.displayNode();
+		//Removing first element from list.
+		linked_list.deleteFirstNode();
 		linked_list.displayNode();
 
 	}
