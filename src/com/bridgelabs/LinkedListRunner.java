@@ -1,6 +1,6 @@
 /****************************************************************
- * Purpose :Ability to delete last element.
- * Final Sequence: 56->30
+ * Purpose :Ability to search element.
+ * Element to search: 30
  * @author Samarth BM
 
 ***************************************************************/
@@ -21,9 +21,8 @@ public class LinkedListRunner {
 		linked_list.appendNode(myThirdNode);
 		// Displaying the nodes.
 		linked_list.displayNode();
-		// Removing last element from list.
-		linked_list.deleteLastNode();
-		linked_list.displayNode();
+		// Getiing the position of element 30.
+		linked_list.searchElement();
 
 	}
 
