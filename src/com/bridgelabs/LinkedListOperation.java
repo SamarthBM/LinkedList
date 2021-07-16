@@ -1,5 +1,5 @@
 /****************************************************************
- * Purpose :
+ * Purpose : To create methods for Linked List operation.
  * @author Samarth BM
 
 ***************************************************************/
