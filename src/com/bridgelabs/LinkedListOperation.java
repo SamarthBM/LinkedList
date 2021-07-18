@@ -126,6 +126,29 @@ public class LinkedListOperation<K> {
 		}
 		previousNode.next = currentNode.next;
 	}
+	/*
+	 * Method to sort the linked list.
+	 * 
+	 * @param element1: element to add and sort.
+	 */
+
+	public void insertSortedList(Integer element1) {
+		MyNode new_node = new MyNode(element1);
+		INode current;
+
+		if (head == null || (Integer) head.getKey() >= (Integer) new_node.getKey()) {
+			new_node.next = head;
+			head = new_node;
+		} else {
+			current = head;
+
+			while (current.getNext() != null && (Integer) current.getNext().getKey() < (Integer) new_node.getKey())
+				current = current.getNext();
+
+			new_node.next = current.getNext();
+			current.setNext(new_node);
+		}
+	}
 
 	/* Method to display Linked List */
 	public void displayNode() {

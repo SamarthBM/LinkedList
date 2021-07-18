@@ -19,12 +19,13 @@ public class LinkedListRunner {
 		linked_list.appendNode(myFirstNode);
 		linked_list.appendNode(mySecondNode);
 		linked_list.appendNode(myThirdNode);
-		// Inserting 40 after 30.
-		linked_list.insertAtPosition(40, 2);
-		linked_list.displayNode();
 		// Deleting 40.
 		linked_list.deleteAtPosition(2);
 		linked_list.displayNode();
+
+		linked_list.insertSortedList(40);
+		linked_list.displayNode();
+
 	}
 
 }
